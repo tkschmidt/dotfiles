@@ -1,0 +1,7 @@
+#!/bin/bash
+fileextension="npwd"
+for file in $(ls|grep pdf); do
+	echo $file 
+	newName=${file/.pdf/_npwd.pdf}
+	qpdf  --decrypt --password=Weihenstephan $file $newName
+done
