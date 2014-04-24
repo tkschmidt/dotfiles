@@ -1,2 +1,2 @@
 #!/bin/bash
-export GOPATH=$(pwd)
+echo "export GOPATH=$(pwd)"

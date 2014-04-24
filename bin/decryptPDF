@@ -1,7 +1,12 @@
 #!/bin/bash
-fileextension="npwd"
-for file in $(ls|grep pdf); do
-	echo $file 
-	newName=${file/.pdf/_npwd.pdf}
-	qpdf  --decrypt --password=Weihenstephan $file $newName
-done
+# $1
+if [[  -z "$1"  ]]; then
+	echo "i need a password"
+else
+	fileextension="npwd"
+	for file in $(ls|grep pdf); do
+		echo $file 
+		newName=${file/.pdf/_npwd.pdf}
+		qpdf  --decrypt --password=$1 $file $newName
+	done
+fi
