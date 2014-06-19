@@ -37,8 +37,14 @@ echo ""
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-    mv ~/.$file ~/dotfiles_old/
+    -mv ~/.$file ~/dotfiles_old/
     echo "Creating symlink to $file in home directory."
     ln -s $dir/$file ~/.$file
     echo ""
 done
+
+# create folder for coding
+echo "create folder ~/code and ~/code/go/"
+mkdir -p ~/code/go/bin
+echo "~/code/go is linked to GOPATH by zsh and PATH is part of ~/code/go/bin"
+echo ""

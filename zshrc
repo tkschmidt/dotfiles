@@ -10,3 +10,8 @@ compinit -i
 # Add stuff to path
 export PATH=~/.bin:$PATH
 
+# Add GOPATH
+export GOPATH=~/code/go/
+
+# Add bins of GOPATHs
+export PATH=$PATH:$GOPATH/bin
