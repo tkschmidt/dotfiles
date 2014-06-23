@@ -6,7 +6,7 @@
 #origin http://blog.smalleycreative.com/tutorials/using-git-and-github-to-manage-your-dotfiles/
 
 ######################
-function install_stuff(){	
+install_stuff(){
 	
 	########## Variables
 	
