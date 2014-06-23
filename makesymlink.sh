@@ -9,7 +9,7 @@
 
 dir=~/dotfiles                    # dotfiles directory
 olddir=~/dotfiles_old             # old dotfiles backup directory
-files="vimrc zshrc zsh bin"    # list of files/folders to symlink in homedir
+files="vimrc zshrc zsh bin tmuxconf"    # list of files/folders to symlink in homedir
 
 ##########
 
@@ -55,3 +55,11 @@ echo "create folder ~/code and ~/code/go/"
 mkdir -p ~/code/go/bin
 echo "~/code/go is linked to GOPATH by zsh and PATH is part of ~/code/go/bin"
 echo ""
+
+#### vim stuff
+# get vim-go
+echo "do some magic vim stuff"
+mkdir -p ~/.vim/bundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+vim +PluginInstall +qall
+sh /Users/tobias/.vim/bundle/YouCompleteMe/install.sh
