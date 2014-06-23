@@ -69,7 +69,7 @@ install_stuff(){
 }
 
 while true; do
-    read -p "Have you installed stuff like  build-essential cmake python-dev golang git hg tmux" yn
+    read -p "Have you installed stuff like 'build-essential cmake python-dev golang git hg tmux'???" yn
     case $yn in
         [Yy]* ) install_stuff; break;;
         [Nn]* ) exit;;
