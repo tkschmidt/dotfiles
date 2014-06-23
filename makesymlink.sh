@@ -37,7 +37,8 @@ echo ""
 # move any existing dotfiles in homedir to dotfiles_old directory, then create symlinks 
 echo "Moving any existing dotfiles from ~ to $olddir"
 for file in $files; do
-	if [ -e $("~/.$file") ];
+	checkpath=~/.$file
+	if [ -e $checkpath ];
 	then
 		echo "$file already exists"
     	mv ~/.$file ~/dotfiles_old/$file
