@@ -15,3 +15,6 @@ export GOPATH=~/code/go/
 
 # Add bins of GOPATHs
 export PATH=$PATH:$GOPATH/bin
+
+# Add path of GOVIMROOT
+export GOVIMROOT=$(go env | grep GOROOT | cut -d\" -f2)
