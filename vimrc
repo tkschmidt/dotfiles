@@ -32,7 +32,6 @@ filetype plugin indent on    " required
 "
 " Settings
 " 
-let g:molokai_original = 1
 
 set noerrorbells                " No beeps
 set number                      " Show line numbers
