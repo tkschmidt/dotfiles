@@ -148,7 +148,7 @@ else
     let g:molokai_original=1
     colorscheme molokai
     highlight SignColumn guibg=#272822
-    highlight VertSplit ctermbg=bg ctermfg=bg 
+    " highlight VertSplit ctermbg=bg ctermfg=bg 
     set t_Co=256
 endif
 
