@@ -457,4 +457,4 @@ noremap <Leader>n :<C-u>call g:NerdTreeFindToggle()<cr>
 
 " For refreshing current file and showing current dir
 noremap <Leader>j :NERDTreeFind<cr>
-" vim:ts=4:sw=4:et
+" vim:ts=4:sw=4:etsource ~/dotfiles/pathStuff

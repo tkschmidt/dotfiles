@@ -58,6 +58,13 @@ install_stuff(){
 	mkdir -p ~/code/go/bin
 	echo "~/code/go is linked to GOPATH by zsh and PATH is part of ~/code/go/bin"
 	echo ""
+
+	# 
+	# Source stuff
+	sourceTarget="bashrc zshrc"
+	for target in $sourceTarget; do
+		echo "source ~/dotfiles/pathStuff" >> ~/.$target
+	done
 	
 	#### vim stuff
 	# get vim-go
