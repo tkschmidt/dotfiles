@@ -145,7 +145,7 @@ else
     set background=dark
 
     let macvim_skip_colorscheme=1
-    let g:molokai_original=1
+    " let g:molokai_original=1
     colorscheme molokai
     highlight SignColumn guibg=#272822
     " highlight VertSplit ctermbg=bg ctermfg=bg 
