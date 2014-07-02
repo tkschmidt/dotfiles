@@ -107,8 +107,8 @@ install_stuff(){
 	git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 	vim +PluginInstall +qall
 	echo "########################################"
-	echo "Do sh ~/.vim/bundle/YouCompleteMe/install.sh"
-	echo "########################################"
+#	echo "Do sh ~/.vim/bundle/YouCompleteMe/install.sh"
+#	echo "########################################"
 
 }
 
