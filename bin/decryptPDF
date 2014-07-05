@@ -2,11 +2,16 @@
 # $1
 if [[  -z "$1"  ]]; then
 	echo "i need a password"
+	exit 1
+elif [[  -z "$2"  ]]; then
+	echo "i need a path"
+	exit 1
 else
 	fileextension="npwd"
-	for file in $(ls|grep pdf); do
+	for file in $(ls $2 |grep pdf); do
 		echo $file 
 		newName=${file/.pdf/_npwd.pdf}
-		qpdf  --decrypt --password=$1 $file $newName
+		qpdf  --decrypt --password=$1 $2/$file $2/$newName
 	done
 fi
+
