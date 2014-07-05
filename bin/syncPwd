@@ -1,0 +1,15 @@
+#!/bin/bash
+# $1
+option="${1}" 
+case ${option} in
+	get|GET)
+		rsync -rvP --delete thoa@corvus.uberspace.de:~/.password-store ~/
+		;;
+	set|SET)
+		rsync -rvP --delete ~/.password-store thoa@corvus.uberspace.de:~/
+		;;
+	*)
+		echo "u can _get|GET_ or _set|SET_ your files"
+		;;
+esac
+
